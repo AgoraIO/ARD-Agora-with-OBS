@@ -57,7 +57,8 @@ if (WIN32)
 			${Qt5Core_INCLUDES}
 			${Qt5Widgets_INCLUDES}
 			"${CMAKE_SOURCE_DIR}/deps/Agora/include"
-			"${CMAKE_SOURCE_DIR}/deps/libyuv/include")
+			"${CMAKE_SOURCE_DIR}/deps/libyuv/include"
+			"${CMAKE_SOURCE_DIR}/deps/curl/include")
 
 endif ()
 if(APPLE)
@@ -95,7 +96,8 @@ if(WIN32)
 		Qt5::Core
 		Qt5::Widgets
 		"${CMAKE_SOURCE_DIR}/deps/Agora/${AGORA_ARCH}/agora_rtc_sdk.lib"
-		"${CMAKE_SOURCE_DIR}/deps/libyuv/${AGORA_ARCH}/yuv.lib")
+		"${CMAKE_SOURCE_DIR}/deps/libyuv/${AGORA_ARCH}/yuv.lib"
+		"${CMAKE_SOURCE_DIR}/deps/curl/${AGORA_ARCH}/libcurl.lib")
 endif()
 
 if(APPLE)
