@@ -1371,7 +1371,7 @@ void AgoraBasic::onSystemCPU_slot(int cpuUsage)
 		for (int i = 0; i < first2MinCpu.size(); ++i) {
 			int cpu = first2MinCpu[i];
 			char szInfo[10] = { 0 };
-			sprintf_s(szInfo, 10, "%d ", cpu);
+      snprintf(szInfo, 10, "%d ", cpu);
 			info += szInfo;
 			if (cpu > m_agoraToolSettings.cpuThreshold) {
 				count1++;
@@ -1383,7 +1383,7 @@ void AgoraBasic::onSystemCPU_slot(int cpuUsage)
 		for (int i = 0; i < lastMinCpu.size(); ++i) {
 			int cpu = lastMinCpu[i];
 			char szInfo[10] = { 0 };
-			sprintf_s(szInfo, 10, "%d ", cpu);
+      snprintf(szInfo, 10, "%d ", cpu);
 			info += szInfo;
 			if (cpu > m_agoraToolSettings.cpuThreshold) {
 				count2++;
